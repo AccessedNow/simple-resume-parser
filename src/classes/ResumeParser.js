@@ -16,6 +16,7 @@ class ResumeParser {
   }
 
   parseToJSON() {
+    console.log('Parsing......')
     return new Promise((resolve, reject) => {
       if (this.data) return resolve(this.data);
       parseIt.parseToJSON(this.path, this.type, (file, error) => {
